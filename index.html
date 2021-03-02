@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest News, Breaking News, Top News Headlines and Current Affairs </title>
+    <style>
+        html, body{
+            width: 100%;
+            font-family: 'proximanova',sans-serif;
+        }
+        header{
+            background-color: black;
+            margin: -10px;
+        }
+        header h1{
+            font-family:roboto;
+            text-align: center;
+            color: white;
+            font-size: 50px;
+            line-height: 60px;
+        }
+        .top{
+            margin: -10px;
+        }
+        .full{
+            background-color: #1A1A1A;
+            padding: 5px 0px;
+            border-bottom: 2px solid #333;
+        }
+        .half1{
+            align-items: center;
+            text-align: center;
+            padding: 0 0 0 10px;
+            color: white;
+        }
+        .half2{
+            float: right;
+            width: 60%;
+
+        }
+        .down{
+            background-color: #be2800;
+            margin: -10px;
+            align-items: center;
+            text-align: center;
+            line-height: 26px;
+            font-size: 15px;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            -webkit-transition: all .5s;
+        }
+        select{
+            background-color: transparent;
+            color: white;
+        }
+        option{
+            color: black;
+        }
+        .down1{
+            padding: 5px 3px;           
+        }
+        .down1:hover{
+            background-color: white;
+            color: #be2800;
+        }
+        .down2{
+            float: right;
+            margin-right: 350px;
+        }
+        .info{
+             font-size: 11px;
+             padding: 10px 0 0;
+             margin: 0 auto;
+             max-width: 1000px;
+        }
+        .main{
+            padding-top: 8px;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding-bottom: 80px; 
+        }
+        .heading{
+        font-size: 30px;
+        border-bottom: 2px solid black;
+        margin: 5px 0 15px;
+        }
+        .left{
+            float: left;
+            width:60%;
+        }
+        .right{
+            float: right;
+            width: 40%;
+        }
+        .pop{
+            font-weight: bold;
+        }
+        .ss{
+            margin-left: -40px;
+            width:fit-content;
+            
+        }
+        .ss li{
+        border-right: 1px solid #f5f5f5;
+        display: table-cell;
+        background: #303030;
+        line-height: 32px;
+        padding: 0 10px;
+        background: #bababa;
+        display: table-cell;
+        }
+        .ss li:hover{
+        text-decoration: none;
+        background: #303030;
+        -webkit-transition: all .5s;
+        }
+        .content li{
+        list-style: none;
+        border-bottom: 1px solid #eceaea;
+        padding: 0 5px 8px 0;
+        position: relative;
+        margin-bottom: 10px;
+        font-weight:normal;
+        display: inline-table;
+        }
+        .content a{
+            color: black;
+        }
+        .content ol{
+            line-height: 16px;
+            margin-left: -39px;
+        }
+        span.a{
+        font-size: small;
+        font-weight:normal;
+        display: block;
+        line-height: 15px;
+        border-top: 1px solid #000;
+        padding-top: 2px;
+        position: relative;
+        }
+        span.a a{
+        background: #fff;
+        left: 85px;
+        padding: 0 5px;
+        position: absolute;
+        text-transform: uppercase;
+        top: -9px;
+        }
+        .line{
+            border-bottom: 3px solid #333
+        }
+        .new{
+            font-size: 11px;
+            line-height: 25px ;
+        }
+        .new li{
+            list-style: none;
+            margin-left: -39px;
+            border-bottom: 1px solid #e5e5e5;
+            margin-bottom: 15px;
+            padding: 15px 0 15px;
+        }
+        .new a{
+            color: #454545;
+            margin-bottom: 5px;
+            float: right;
+        }
+        span.small{
+        
+        font-size: 10px;
+        color: #000;
+        line-height: 16px;
+        font-weight: normal;
+        display:flex;
+        }
+        .buttons{
+        text-align: center;
+        padding: 10px 0 1
+        }
+        .buttons li{
+        list-style: none;
+        display: inline-block;
+        width: 25px;
+        height: 17px;
+        border: 0 none;
+        background: #f1f1f1;
+        padding-top: 8px;
+        margin-right: 1px;
+        vertical-align: top;
+        padding: 5px 0;
+        line-height: 18px;
+        }
+        .buttons a{
+            color: black;
+        }
+        .footer{
+        background: #111 url(https://static.toiimg.com/photo/57270035.cms) repeat;
+        border-top: 3px solid #be2819;
+        width:100%;
+        height:600px;
+        margin-top: 305%;
+        }
+        .section{
+            margin-bottom: 20px;
+            margin-left: 100px;
+        }
+        .section ul{
+            padding-left: 17px;
+        }
+        .section li{
+        list-style: none;
+        display: inline-block;
+        width: 33.33%;
+        margin: 0 -2px;
+        padding-right: 1px;
+        vertical-align: top;
+        font-size: small;
+        line-height: 1.2rem;
+        }
+        .footer h2{
+        font-size: 12px;
+        line-height: 1;
+        color: #ccc;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+        padding-left: 17px;
+        position: relative;
+        overflow: hidden;
+        font-weight: 600;
+        }
+        .this{
+            width: 50%;
+        }
+        .that{
+            float: right;
+            width: 50%;
+            margin-top: -550px;
+            margin-right: 75px;
+        }
+        .last{
+        max-width: 1295px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
+        }
+        .last p{
+        font-size: 12px;
+        line-height: 1.4;
+        color: #ccc;
+        text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <div class="top">
+        <div class="full">
+            <div class="half1">
+                <select>
+                    <option>English</option>
+                    <option>Hindi</option>
+                    <option>Marathi</option>
+                    <option>Telugu</option>
+                </select>
+                <span>|</span>
+                <a href="#">Epaper</a>
+                <span>|</span>
+                <a href="#">GadgetsNow</a>
+            
+            <div class="half2">
+                <a style="margin-left: 120px;font-size: 15px;" href="#">SIGN IN &nbsp;</a>
+                <img style="height: 18px;margin-left: 5px;" src="https://img.icons8.com/material-sharp/24/ffffff/bell.png">
+                <img style="margin-left: 5px;height: 18px;" src="https://img.icons8.com/small/16/ffffff/twitter.png"/>
+                <img style="height: 18px;" src="https://img.icons8.com/small/16/ffffff/facebook-new.png"/>
+                <img style="height: 18px;" src="https://img.icons8.com/small/16/ffffff/rss.png"/>
+                <img style="height: 18px;" src="https://img.icons8.com/small/16/ffffff/youtube.png"/>
+            </div>
+            </div>
+        </div>
+    </div>
+        <h1>THE TIMES OF INDIA</h1>
+    <div class="down">
+        <img style="height: 15px;" src="https://img.icons8.com/material-sharp/24/ffffff/home.png"/>
+        <a class="down1" href="#">Latest News</a>
+        <a class="down1" href="#">Most Shared</a>
+        <a class="down1" href="#">Most Read</a>
+        <a class="down1" href="#">Most Commented</a>
+        <a class="down1" href="#">Delhi Elections</a>
+        <a class="down1" href="#">Bihar Elections</a>
+        <a class="down2" href="#"><img src="https://img.icons8.com/android/24/ffffff/search.png"/></a>
+    </div>
+    </header>
+    <div class="info">
+        <br>
+        <a style="color: black;" href="#">News</a>
+        &nbsp;»&nbsp;Latest News
+    </div>
+    <div class="main">
+        <h1 class="heading">LATEST NEWS</h1>
+        <div class="left">
+            <ol class="new">
+                <li>
+                    <img src="https://static.toiimg.com/thumb/imgsize-70163,msid-81272670,width-141,resizemode-4/81272670.jpg">
+                    <a style="font-size:13px; font-weight:bold; line-height: 20px;" href="#">Covid vaccination: Co-WIN app not for public, govt clarifies after glitches</a>
+                    <a style="width:80%; margin-top:-90px;">The Union health ministry on Monday clarified that the Co-WIN app is "only for administrators" and that people who want to book an appointment for Covid-19 vaccination should instead visit the Co-WIN website. The ministry gave the clarification amid reported glitches in doing registrations as India opened up vaccination for senior citizens and those above 45 with comorbidities.</a>
+                </li>
+                <li>
+                    <img src="https://static.toiimg.com/thumb/imgsize-114936,msid-81285391,width-141,resizemode-4/81285391.jpg">
+                    <a style="font-size:13px; font-weight:bold; line-height: 20px;margin-right: 160px;" href="#">Will not junk farm laws, PM indicates yet again</a>
+                    <a style="width:80%; margin-top:-90px;"> PM Modi on Monday again advocated the need for agricultural reforms to help farmers realise better prices for their produce, vigorously pitching for setting up more and more Farmer Producer Organisations (FPOs) across the country to get small and marginal farmers better access to technology, input, finance and market.</a>
+                </li>
+                <li>
+                    <img src="https://static.toiimg.com/thumb/imgsize-327617,msid-81284930,width-141,resizemode-4/81284930.jpg">
+                    <a style="font-size:13px; font-weight:bold; line-height: 20px;" href="#">Covid vaccination: Co-WIN app not for public, govt clarifies after glitches</a>
+                    <a style="width:80%; margin-top:-90px;">The Union health ministry on Monday clarified that the Co-WIN app is "only for administrators" and that people who want to book an appointment for Covid-19 vaccination should instead visit the Co-WIN website. The ministry gave the clarification amid reported glitches in doing registrations as India opened up vaccination for senior citizens and those above 45 with comorbidities.</a>
+                </li>
+                <li>
+                    <img src="https://static.toiimg.com/thumb/imgsize-205412,msid-81285626,width-141,resizemode-4/81285626.jpg">
+                    <a style="font-size:13px; font-weight:bold; line-height: 20px;" href="#">Covid vaccination: Co-WIN app not for public, govt clarifies after glitches</a>
+                    <a style="width:80%; margin-top:-90px;">The Union health ministry on Monday clarified that the Co-WIN app is "only for administrators" and that people who want to book an appointment for Covid-19 vaccination should instead visit the Co-WIN website. The ministry gave the clarification amid reported glitches in doing registrations as India opened up vaccination for senior citizens and those above 45 with comorbidities.</a>
+                </li>
+                <li>
+                    <img src="https://static.toiimg.com/thumb/imgsize-70163,msid-81272670,width-141,resizemode-4/81272670.jpg">
+                    <a style="font-size:13px; font-weight:bold; line-height: 20px;" href="#">Covid vaccination: Co-WIN app not for public, govt clarifies after glitches</a>
+                    <a style="width:80%; margin-top:-90px;">The Union health ministry on Monday clarified that the Co-WIN app is "only for administrators" and that people who want to book an appointment for Covid-19 vaccination should instead visit the Co-WIN website. The ministry gave the clarification amid reported glitches in doing registrations as India opened up vaccination for senior citizens and those above 45 with comorbidities.</a>
+                </li>
+                <li>
+                    <img src="https://static.toiimg.com/thumb/imgsize-114936,msid-81285391,width-141,resizemode-4/81285391.jpg">
+                    <a style="font-size:13px; font-weight:bold; line-height: 20px;margin-right: 160px;" href="#">Will not junk farm laws, PM indicates yet again</a>
+                    <a style="width:80%; margin-top:-90px;"> PM Modi on Monday again advocated the need for agricultural reforms to help farmers realise better prices for their produce, vigorously pitching for setting up more and more Farmer Producer Organisations (FPOs) across the country to get small and marginal farmers better access to technology, input, finance and market.</a>
+                </li>
+                <li>
+                    <img src="https://static.toiimg.com/thumb/imgsize-327617,msid-81284930,width-141,resizemode-4/81284930.jpg">
+                    <a style="font-size:13px; font-weight:bold; line-height: 20px;" href="#">Covid vaccination: Co-WIN app not for public, govt clarifies after glitches</a>
+                    <a style="width:80%; margin-top:-90px;">The Union health ministry on Monday clarified that the Co-WIN app is "only for administrators" and that people who want to book an appointment for Covid-19 vaccination should instead visit the Co-WIN website. The ministry gave the clarification amid reported glitches in doing registrations as India opened up vaccination for senior citizens and those above 45 with comorbidities.</a>
+                </li>
+                <li>
+                    <img src="https://static.toiimg.com/thumb/imgsize-205412,msid-81285626,width-141,resizemode-4/81285626.jpg">
+                    <a style="font-size:13px; font-weight:bold; line-height: 20px;" href="#">Covid vaccination: Co-WIN app not for public, govt clarifies after glitches</a>
+                    <a style="width:80%; margin-top:-90px;">The Union health ministry on Monday clarified that the Co-WIN app is "only for administrators" and that people who want to book an appointment for Covid-19 vaccination should instead visit the Co-WIN website. The ministry gave the clarification amid reported glitches in doing registrations as India opened up vaccination for senior citizens and those above 45 with comorbidities.</a>
+                </li>
+                <li>
+                    <img src="https://static.toiimg.com/thumb/imgsize-70163,msid-81272670,width-141,resizemode-4/81272670.jpg">
+                    <a style="font-size:13px; font-weight:bold; line-height: 20px;" href="#">Covid vaccination: Co-WIN app not for public, govt clarifies after glitches</a>
+                    <a style="width:80%; margin-top:-90px;">The Union health ministry on Monday clarified that the Co-WIN app is "only for administrators" and that people who want to book an appointment for Covid-19 vaccination should instead visit the Co-WIN website. The ministry gave the clarification amid reported glitches in doing registrations as India opened up vaccination for senior citizens and those above 45 with comorbidities.</a>
+                </li>
+                <li>
+                    <img src="https://static.toiimg.com/thumb/imgsize-114936,msid-81285391,width-141,resizemode-4/81285391.jpg">
+                    <a style="font-size:13px; font-weight:bold; line-height: 20px;margin-right: 160px;" href="#">Will not junk farm laws, PM indicates yet again</a>
+                    <a style="width:80%; margin-top:-90px;"> PM Modi on Monday again advocated the need for agricultural reforms to help farmers realise better prices for their produce, vigorously pitching for setting up more and more Farmer Producer Organisations (FPOs) across the country to get small and marginal farmers better access to technology, input, finance and market.</a>
+                </li>
+                <li>
+                    <img src="https://static.toiimg.com/thumb/imgsize-327617,msid-81284930,width-141,resizemode-4/81284930.jpg">
+                    <a style="font-size:13px; font-weight:bold; line-height: 20px;" href="#">Covid vaccination: Co-WIN app not for public, govt clarifies after glitches</a>
+                    <a style="width:80%; margin-top:-90px;">The Union health ministry on Monday clarified that the Co-WIN app is "only for administrators" and that people who want to book an appointment for Covid-19 vaccination should instead visit the Co-WIN website. The ministry gave the clarification amid reported glitches in doing registrations as India opened up vaccination for senior citizens and those above 45 with comorbidities.</a>
+                </li>
+                <li>
+                    <img src="https://static.toiimg.com/thumb/imgsize-205412,msid-81285626,width-141,resizemode-4/81285626.jpg">
+                    <a style="font-size:13px; font-weight:bold; line-height: 20px;" href="#">Covid vaccination: Co-WIN app not for public, govt clarifies after glitches</a>
+                    <a style="width:80%; margin-top:-90px;">The Union health ministry on Monday clarified that the Co-WIN app is "only for administrators" and that people who want to book an appointment for Covid-19 vaccination should instead visit the Co-WIN website. The ministry gave the clarification amid reported glitches in doing registrations as India opened up vaccination for senior citizens and those above 45 with comorbidities.</a>
+                </li>
+                <li>
+                    <img src="https://static.toiimg.com/thumb/imgsize-70163,msid-81272670,width-141,resizemode-4/81272670.jpg">
+                    <a style="font-size:13px; font-weight:bold; line-height: 20px;" href="#">Covid vaccination: Co-WIN app not for public, govt clarifies after glitches</a>
+                    <a style="width:80%; margin-top:-90px;">The Union health ministry on Monday clarified that the Co-WIN app is "only for administrators" and that people who want to book an appointment for Covid-19 vaccination should instead visit the Co-WIN website. The ministry gave the clarification amid reported glitches in doing registrations as India opened up vaccination for senior citizens and those above 45 with comorbidities.</a>
+                </li>
+                <li>
+                    <img src="https://static.toiimg.com/thumb/imgsize-114936,msid-81285391,width-141,resizemode-4/81285391.jpg">
+                    <a style="font-size:13px; font-weight:bold; line-height: 20px;margin-right: 160px;" href="#">Will not junk farm laws, PM indicates yet again</a>
+                    <a style="width:80%; margin-top:-90px;"> PM Modi on Monday again advocated the need for agricultural reforms to help farmers realise better prices for their produce, vigorously pitching for setting up more and more Farmer Producer Organisations (FPOs) across the country to get small and marginal farmers better access to technology, input, finance and market.</a>
+                </li>
+                <li>
+                    <img src="https://static.toiimg.com/thumb/imgsize-327617,msid-81284930,width-141,resizemode-4/81284930.jpg">
+                    <a style="font-size:13px; font-weight:bold; line-height: 20px;" href="#">Covid vaccination: Co-WIN app not for public, govt clarifies after glitches</a>
+                    <a style="width:80%; margin-top:-90px;">The Union health ministry on Monday clarified that the Co-WIN app is "only for administrators" and that people who want to book an appointment for Covid-19 vaccination should instead visit the Co-WIN website. The ministry gave the clarification amid reported glitches in doing registrations as India opened up vaccination for senior citizens and those above 45 with comorbidities.</a>
+                </li>
+                <li>
+                    <img src="https://static.toiimg.com/thumb/imgsize-205412,msid-81285626,width-141,resizemode-4/81285626.jpg">
+                    <a style="font-size:13px; font-weight:bold; line-height: 20px;" href="#">Covid vaccination: Co-WIN app not for public, govt clarifies after glitches</a>
+                    <a style="width:80%; margin-top:-90px;">The Union health ministry on Monday clarified that the Co-WIN app is "only for administrators" and that people who want to book an appointment for Covid-19 vaccination should instead visit the Co-WIN website. The ministry gave the clarification amid reported glitches in doing registrations as India opened up vaccination for senior citizens and those above 45 with comorbidities.</a>
+                </li>
+                <li>
+                    <img src="https://static.toiimg.com/thumb/imgsize-70163,msid-81272670,width-141,resizemode-4/81272670.jpg">
+                    <a style="font-size:13px; font-weight:bold; line-height: 20px;" href="#">Covid vaccination: Co-WIN app not for public, govt clarifies after glitches</a>
+                    <a style="width:80%; margin-top:-90px;">The Union health ministry on Monday clarified that the Co-WIN app is "only for administrators" and that people who want to book an appointment for Covid-19 vaccination should instead visit the Co-WIN website. The ministry gave the clarification amid reported glitches in doing registrations as India opened up vaccination for senior citizens and those above 45 with comorbidities.</a>
+                </li>
+                <li>
+                    <img src="https://static.toiimg.com/thumb/imgsize-114936,msid-81285391,width-141,resizemode-4/81285391.jpg">
+                    <a style="font-size:13px; font-weight:bold; line-height: 20px;margin-right: 160px;" href="#">Will not junk farm laws, PM indicates yet again</a>
+                    <a style="width:80%; margin-top:-90px;"> PM Modi on Monday again advocated the need for agricultural reforms to help farmers realise better prices for their produce, vigorously pitching for setting up more and more Farmer Producer Organisations (FPOs) across the country to get small and marginal farmers better access to technology, input, finance and market.</a>
+                </li>
+                <li>
+                    <img src="https://static.toiimg.com/thumb/imgsize-327617,msid-81284930,width-141,resizemode-4/81284930.jpg">
+                    <a style="font-size:13px; font-weight:bold; line-height: 20px;" href="#">Covid vaccination: Co-WIN app not for public, govt clarifies after glitches</a>
+                    <a style="width:80%; margin-top:-90px;">The Union health ministry on Monday clarified that the Co-WIN app is "only for administrators" and that people who want to book an appointment for Covid-19 vaccination should instead visit the Co-WIN website. The ministry gave the clarification amid reported glitches in doing registrations as India opened up vaccination for senior citizens and those above 45 with comorbidities.</a>
+                </li>
+                <li>
+                    <img src="https://static.toiimg.com/thumb/imgsize-205412,msid-81285626,width-141,resizemode-4/81285626.jpg">
+                    <a style="font-size:13px; font-weight:bold; line-height: 20px;" href="#">Covid vaccination: Co-WIN app not for public, govt clarifies after glitches</a>
+                    <a style="width:80%; margin-top:-90px;">The Union health ministry on Monday clarified that the Co-WIN app is "only for administrators" and that people who want to book an appointment for Covid-19 vaccination should instead visit the Co-WIN website. The ministry gave the clarification amid reported glitches in doing registrations as India opened up vaccination for senior citizens and those above 45 with comorbidities.</a>
+                </li>
+                <li>
+                    <img src="https://static.toiimg.com/thumb/imgsize-70163,msid-81272670,width-141,resizemode-4/81272670.jpg">
+                    <a style="font-size:13px; font-weight:bold; line-height: 20px;" href="#">Covid vaccination: Co-WIN app not for public, govt clarifies after glitches</a>
+                    <a style="width:80%; margin-top:-90px;">The Union health ministry on Monday clarified that the Co-WIN app is "only for administrators" and that people who want to book an appointment for Covid-19 vaccination should instead visit the Co-WIN website. The ministry gave the clarification amid reported glitches in doing registrations as India opened up vaccination for senior citizens and those above 45 with comorbidities.</a>
+                </li>
+                <li>
+                    <img src="https://static.toiimg.com/thumb/imgsize-114936,msid-81285391,width-141,resizemode-4/81285391.jpg">
+                    <a style="font-size:13px; font-weight:bold; line-height: 20px;margin-right: 160px;" href="#">Will not junk farm laws, PM indicates yet again</a>
+                    <a style="width:80%; margin-top:-90px;"> PM Modi on Monday again advocated the need for agricultural reforms to help farmers realise better prices for their produce, vigorously pitching for setting up more and more Farmer Producer Organisations (FPOs) across the country to get small and marginal farmers better access to technology, input, finance and market.</a>
+                </li>
+                <li>
+                    <img src="https://static.toiimg.com/thumb/imgsize-327617,msid-81284930,width-141,resizemode-4/81284930.jpg">
+                    <a style="font-size:13px; font-weight:bold; line-height: 20px;" href="#">Covid vaccination: Co-WIN app not for public, govt clarifies after glitches</a>
+                    <a style="width:80%; margin-top:-90px;">The Union health ministry on Monday clarified that the Co-WIN app is "only for administrators" and that people who want to book an appointment for Covid-19 vaccination should instead visit the Co-WIN website. The ministry gave the clarification amid reported glitches in doing registrations as India opened up vaccination for senior citizens and those above 45 with comorbidities.</a>
+                </li>
+                <li>
+                    <img src="https://static.toiimg.com/thumb/imgsize-205412,msid-81285626,width-141,resizemode-4/81285626.jpg">
+                    <a style="font-size:13px; font-weight:bold; line-height: 20px;" href="#">Covid vaccination: Co-WIN app not for public, govt clarifies after glitches</a>
+                    <a style="width:80%; margin-top:-90px;">The Union health ministry on Monday clarified that the Co-WIN app is "only for administrators" and that people who want to book an appointment for Covid-19 vaccination should instead visit the Co-WIN website. The ministry gave the clarification amid reported glitches in doing registrations as India opened up vaccination for senior citizens and those above 45 with comorbidities.</a>
+                </li>
+                <li>
+                    <img src="https://static.toiimg.com/thumb/imgsize-70163,msid-81272670,width-141,resizemode-4/81272670.jpg">
+                    <a style="font-size:13px; font-weight:bold; line-height: 20px;" href="#">Covid vaccination: Co-WIN app not for public, govt clarifies after glitches</a>
+                    <a style="width:80%; margin-top:-90px;">The Union health ministry on Monday clarified that the Co-WIN app is "only for administrators" and that people who want to book an appointment for Covid-19 vaccination should instead visit the Co-WIN website. The ministry gave the clarification amid reported glitches in doing registrations as India opened up vaccination for senior citizens and those above 45 with comorbidities.</a>
+                </li>
+                <li>
+                    <img src="https://static.toiimg.com/thumb/imgsize-114936,msid-81285391,width-141,resizemode-4/81285391.jpg">
+                    <a style="font-size:13px; font-weight:bold; line-height: 20px;margin-right: 160px;" href="#">Will not junk farm laws, PM indicates yet again</a>
+                    <a style="width:80%; margin-top:-90px;"> PM Modi on Monday again advocated the need for agricultural reforms to help farmers realise better prices for their produce, vigorously pitching for setting up more and more Farmer Producer Organisations (FPOs) across the country to get small and marginal farmers better access to technology, input, finance and market.</a>
+                </li>
+                <li>
+                    <img src="https://static.toiimg.com/thumb/imgsize-327617,msid-81284930,width-141,resizemode-4/81284930.jpg">
+                    <a style="font-size:13px; font-weight:bold; line-height: 20px;" href="#">Covid vaccination: Co-WIN app not for public, govt clarifies after glitches</a>
+                    <a style="width:80%; margin-top:-90px;">The Union health ministry on Monday clarified that the Co-WIN app is "only for administrators" and that people who want to book an appointment for Covid-19 vaccination should instead visit the Co-WIN website. The ministry gave the clarification amid reported glitches in doing registrations as India opened up vaccination for senior citizens and those above 45 with comorbidities.</a>
+                </li>
+                <li>
+                    <img src="https://static.toiimg.com/thumb/imgsize-205412,msid-81285626,width-141,resizemode-4/81285626.jpg">
+                    <a style="font-size:13px; font-weight:bold; line-height: 20px;" href="#">Covid vaccination: Co-WIN app not for public, govt clarifies after glitches</a>
+                    <a style="width:80%; margin-top:-90px;">The Union health ministry on Monday clarified that the Co-WIN app is "only for administrators" and that people who want to book an appointment for Covid-19 vaccination should instead visit the Co-WIN website. The ministry gave the clarification amid reported glitches in doing registrations as India opened up vaccination for senior citizens and those above 45 with comorbidities.</a>
+                </li>
+                
+            </ol>
+            <ul class="buttons">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <img src="ad.PNG">
+            <div class="pop">
+                <br>
+                MOST POPULAR
+                <ul class="ss">
+                    <li><a href="#">SHARED</a></li>
+                    <li><a href="#">COMMENTED</a></li>
+                    <li><a href="#">READ</a></li>
+                    <li><a href="#">TRENDING</a></li>
+                </ul>
+            <div class="content">
+                <ol>
+                    <li><a href="#">Belagavi to get Rs 543 crore investment</a></li>
+                    <li><a href="#">Wedding venue in Nagpur turns Covid detection centre</a></li>
+                    <li><a href="#">Bengaluru-Chennai expressway work may begin soon</a></li>
+                    <li><a href="#">Aditya Narayan reveals why he was missing from Indian Idol; the host was tending to an injury</a></li>
+                </ol>
+                <span class="a">
+                    <a href="#">See all most shared stories</a>
+                </span>
+            </div>
+            </div>
+            <div class="pop">
+                <br>
+                Entertainment News
+                <div class="line"><br></div>
+                <ol class="new">
+                    <li>
+                        <img src="https://static.toiimg.com/thumb/imgsize-109408,msid-81270130,width-150,resizemode-4/81270130.jpg">
+                        <a href="#">Exclusive! When Dharmendra got 'Aag Hi Aag'</a>
+                    </li>
+                    <li>
+                        <img style="height: 115px;" src="https://static.toiimg.com/photo/81265184.cms">
+                        <a href="#">Golden Globes 2021: Complete Winners’ list</a>
+                    </li>
+                    <li>
+                        <img src="https://static.toiimg.com/thumb/imgsize-174895,msid-81268323,width-150,resizemode-4/81268323.jpg">
+                        <a href="#">Mira Rajput shares her fitness mantra</a>
+                    </li>
+                    <li>
+                        <img style="height: 115px;width: 150px;" src="https://static.toiimg.com/photo/81273157.cms">
+                        <a href="#">When Alia spoke about her boyfriend Ranbir</a>
+                    </li>
+                    <li>
+                        <img src="https://static.toiimg.com/thumb/imgsize-162990,msid-81275184,width-150,resizemode-4/81275184.jpg">
+                        <a href="#">Ajay to make a special announcement for Sajid</a>
+                    </li>
+                </ol>
+            </div>
+            <div class="pop">
+                <br>
+                Business News
+                <div class="line"><br></div>
+                <ol class="new">
+                    <li>
+                        <img src="https://static.toiimg.com/thumb/imgsize-109408,msid-81270130,width-150,resizemode-4/81270130.jpg">
+                        <a href="#">Exclusive! When Dharmendra got 'Aag Hi Aag'</a>
+                    </li>
+                    <li>
+                        <img style="height: 115px;" src="https://static.toiimg.com/photo/81265184.cms">
+                        <a href="#">Golden Globes 2021: Complete Winners’ list</a>
+                    </li>
+                    <li>
+                        <img src="https://static.toiimg.com/thumb/imgsize-174895,msid-81268323,width-150,resizemode-4/81268323.jpg">
+                        <a href="#">Mira Rajput shares her fitness mantra</a>
+                    </li>
+                    <li>
+                        <img style="height: 115px;width: 150px;" src="https://static.toiimg.com/photo/81273157.cms">
+                        <a href="#">When Alia spoke about her boyfriend Ranbir</a>
+                    </li>
+                    <li>
+                        <img src="https://static.toiimg.com/thumb/imgsize-162990,msid-81275184,width-150,resizemode-4/81275184.jpg">
+                        <a href="#">Ajay to make a special announcement for Sajid</a>
+                    </li>
+                </ol>
+            </div>
+            <div class="pop">
+                <br>
+                TV News
+                <div class="line"><br></div>
+                <ol class="new">
+                    <li>
+                        <img src="https://static.toiimg.com/thumb/imgsize-109408,msid-81270130,width-150,resizemode-4/81270130.jpg">
+                        <a href="#">Exclusive! When Dharmendra got 'Aag Hi Aag'</a>
+                    </li>
+                    <li>
+                        <img style="height: 115px;" src="https://static.toiimg.com/photo/81265184.cms">
+                        <a href="#">Golden Globes 2021: Complete Winners’ list</a>
+                    </li>
+                    <li>
+                        <img src="https://static.toiimg.com/thumb/imgsize-174895,msid-81268323,width-150,resizemode-4/81268323.jpg">
+                        <a href="#">Mira Rajput shares her fitness mantra</a>
+                    </li>
+                    <li>
+                        <img style="height: 115px;width: 150px;" src="https://static.toiimg.com/photo/81273157.cms">
+                        <a href="#">When Alia spoke about her boyfriend Ranbir</a>
+                    </li>
+                    <li>
+                        <img src="https://static.toiimg.com/thumb/imgsize-162990,msid-81275184,width-150,resizemode-4/81275184.jpg">
+                        <a href="#">Ajay to make a special announcement for Sajid</a>
+                    </li>
+                </ol>
+            </div>
+            <div class="pop">
+                <br>
+                Sports News
+                <div class="line"><br></div>
+                <ol class="new">
+                    <li>
+                        <img src="https://static.toiimg.com/thumb/imgsize-109408,msid-81270130,width-150,resizemode-4/81270130.jpg">
+                        <a href="#">Exclusive! When Dharmendra got 'Aag Hi Aag'</a>
+                    </li>
+                    <li>
+                        <img style="height: 115px;" src="https://static.toiimg.com/photo/81265184.cms">
+                        <a href="#">Golden Globes 2021: Complete Winners’ list</a>
+                    </li>
+                    <li>
+                        <img src="https://static.toiimg.com/thumb/imgsize-174895,msid-81268323,width-150,resizemode-4/81268323.jpg">
+                        <a href="#">Mira Rajput shares her fitness mantra</a>
+                    </li>
+                    <li>
+                        <img style="height: 115px;width: 150px;" src="https://static.toiimg.com/photo/81273157.cms">
+                        <a href="#">When Alia spoke about her boyfriend Ranbir</a>
+                    </li>
+                    <li>
+                        <img src="https://static.toiimg.com/thumb/imgsize-162990,msid-81275184,width-150,resizemode-4/81275184.jpg">
+                        <a href="#">Ajay to make a special announcement for Sajid</a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="this">
+        <div class="section">
+            <h2>
+                <span>Other Times Group news sites</span>
+            </h2>
+            <ul>
+                <li><a href="#">The Economic Times</a></li>
+                <li><a href="#">Hindi Economic Times</a></li>
+                <li><a href="#">Navbharat Times</a></li>
+                <li><a href="#">Maharashtra Times</a></li>
+                <li><a href="#">Vijaya Karnataka</a></li>
+                <li><a href="#">Telugu Samayam</a></li>
+                <li><a href="#">Tamil Samayam</a></li>
+                <li><a href="#">Malayalam Samayam</a></li>
+                <li><a href="#">Ei Samay</a></li>
+                <li><a href="#">The Economic Times</a></li>
+                <li><a href="#">Hindi Economic Times</a></li>
+                <li><a href="#">Navbharat Times</a></li>
+                <li><a href="#">Maharashtra Times</a></li>
+                <li><a href="#">Vijaya Karnataka</a></li>
+                <li><a href="#">Telugu Samayam</a></li>
+                <li><a href="#">Tamil Samayam</a></li>
+                <li><a href="#">Malayalam Samayam</a></li>
+                <li><a href="#">Ei Samay</a></li>
+                <li><a href="#">The Economic Times</a></li>
+                <li><a href="#">Hindi Economic Times</a></li>
+                <li><a href="#">Navbharat Times</a></li>
+                <li><a href="#">Maharashtra Times</a></li>
+                <li><a href="#">Vijaya Karnataka</a></li>
+                <li><a href="#">Telugu Samayam</a></li>
+                <li><a href="#">Tamil Samayam</a></li>
+                <li><a href="#">Malayalam Samayam</a></li>
+                <li><a href="#">Ei Samay</a></li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>
+                <span>LIVING AND ENTERTAINMENT</span>
+            </h2>
+            <ul>
+                <li><a href="#">iDiva</a></li>
+                <li><a href="#">MensXP.com </a></li>
+                <li><a href="#">Femina</a></li>
+                <li><a href="#">ETimes</a></li>
+                <li><a href="#">Grazia </a></li>
+                <li><a href="#">Zoom </a></li>
+                <li><a href="#">Travel Destinations </a></li>
+                <li><a href="#">Bombay Times </a></li>
+                <li><a href="#">Cricbuzz.com </a></li>
+                <li><a href="#">iDiva</a></li>
+                <li><a href="#">MensXP.com </a></li>
+                <li><a href="#">Femina</a></li>
+                <li><a href="#">ETimes</a></li>
+                <li><a href="#">Grazia </a></li>
+                <li><a href="#">Zoom </a></li>
+                <li><a href="#">Travel Destinations </a></li>
+                <li><a href="#">Bombay Times </a></li>
+                <li><a href="#">Cricbuzz.com </a></li>
+                <li><a href="#">iDiva</a></li>
+                <li><a href="#">MensXP.com </a></li>
+                <li><a href="#">Femina</a></li>
+                <li><a href="#">ETimes</a></li>
+                <li><a href="#">Grazia </a></li>
+                <li><a href="#">Zoom </a></li>
+                <li><a href="#">Travel Destinations </a></li>
+                <li><a href="#">Bombay Times </a></li>
+                <li><a href="#">Cricbuzz.com </a></li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>
+                <span>TOP TRENDS</span>
+            </h2>
+            <ul>
+                <li><a href="#">IPL Auction 2021 players</a></li>
+                <li><a href="#">Cowin registration</a></li>
+                <li><a href="#">West Bengal Election date 2021</a></li>
+                <li><a href="#">Gujarat Election Results 2021</a></li>
+                <li><a href="#">Coronavirus India update live</a></li>
+                <li><a href="#">Covid 19 vaccine registration</a></li>
+                <li><a href="#">Narendra Modi</a></li>
+                <li><a href="#">India vs England 4th test</a></li>
+                <li><a href="#">ICSE Date Sheet 2021</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="that">
+        <div class="section">
+            <h2>
+                <span>SERVICES</span>
+            </h2>
+            <ul>
+                <li><a href="#">Ads 2 Book</a></li>
+                <li><a href="#">Bank Exam App</a></li>
+                <li><a href="#">ET Money Finance App</a></li>
+                <li><a href="#">CouponDunia</a></li>
+                <li><a href="#">Dineout</a></li>
+                <li><a href="#">Magicbricks</a></li>
+                <li><a href="#">Techgig</a></li>
+                <li><a href="#">Times Jobs</a></li>
+                <li><a href="#">Bollywood News</a></li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>
+                <span>POPULAR CATEGORIES</span>
+            </h2>
+            <ul>
+                <li><a href="#">Headlines</a></li>
+                <li><a href="#">Sports News</a></li>
+                <li><a href="#">Business News</a></li>
+                <li><a href="#">India News</a></li>
+                <li><a href="#">World News</a></li>
+                <li><a href="#">Bollywood News</a></li>
+                <li><a href="#">Health & Fitness Tips</a></li>
+                <li><a href="#">Indian TV Shows</a></li>
+                <li><a href="#">The Economic Times</a></li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>
+                <span>HOT ON THE WEB</span>
+            </h2>
+            <ul>
+                <li><a href="#">Vijaya Karnataka</a></li>
+                <li><a href="#">Telugu Samayam</a></li>
+                <li><a href="#">Tamil Samayam</a></li>
+                <li><a href="#">Malayalam Samayam</a></li>
+                <li><a href="#">Ei Samay</a></li>
+                <li><a href="#">The Economic Times</a></li>
+                <li><a href="#">Hindi Economic Times</a></li>
+                <li><a href="#">Navbharat Times</a></li>
+                <li><a href="#">Maharashtra Times</a></li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>
+                <span>TRENDING TOPICS</span>
+            </h2>
+            <ul>
+                <li><a href="#">IPL Auction 2021 players</a></li>
+                <li><a href="#">Cowin registration</a></li>
+                <li><a href="#">West Bengal Election date 2021</a></li>
+                <li><a href="#">Gujarat Election Results 2021</a></li>
+                <li><a href="#">Coronavirus India update live</a></li>
+                <li><a href="#">Covid 19 vaccine registration</a></li>
+                <li><a href="#">Narendra Modi</a></li>
+                <li><a href="#">India vs England 4th test</a></li>
+                <li><a href="#">ICSE Date Sheet 2021</a></li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>
+                <span>TRENDING TOPICS</span>
+            </h2>
+            <ul>
+                <li><a href="#">Headlines</a></li>
+                <li><a href="#">Sports News</a></li>
+                <li><a href="#">Business News</a></li>
+                <li><a href="#">India News</a></li>
+                <li><a href="#">World News</a></li>
+                <li><a href="#">Bollywood News</a></li>
+                <li><a href="#">Health & Fitness Tips</a></li>
+                <li><a href="#">Indian TV Shows</a></li>
+                <li><a href="#">The Economic Times</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="last">
+        <p>Copyright © 2021 Bennett, Coleman & Co. Ltd. All rights reserved. For reprint rights:
+        <a style="color: #666;" href="#">Times Syndication Service</a> 
+        </p>
+    </div>
+    </div>
+</body>
+</html>
